@@ -73,6 +73,7 @@ The following results were obtained by finetuning coqui-TTS model.
 
 To use the trained model from the command line, you can follow the example command provided below:
 
+[model.pth](https://drive.google.com/file/d/10pBYmqaqPjpe3TgthFfEtVg0HkPdz-7d/view?usp=sharing) and [config.json](https://drive.google.com/file/d/10iDBRhVzDXeHynyKu4QFqmR06yHpGI_n/view?usp=sharing)
 ```
  !tts --text "Hi, I am an excellent Text to Speech cloning AI" \
       --model_path $model.pth\
