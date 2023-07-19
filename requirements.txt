@@ -1,0 +1,11 @@
+pip
+TTS
+datasets
+pyloudnorm
+pandas
+numpy
+glob
+os
+IPython
+locale
+trainer
