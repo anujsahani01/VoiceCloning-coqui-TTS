@@ -19,8 +19,8 @@ For this project, we used a dataset consisting of 82 data points of Priyanka Cho
 * Extracted voice and subtitles from **Priyanka Chopra's** interview using [yt-dlp](https://github.com/yt-dlp/yt-dlp).
 * Filtered the data to remove voices of other speakers from both audio and text data.
 * Cleaned the audio dataset using [Audacity](https://www.audacityteam.org/download/) to enhance its usability.
-* Used this [🤗model](https://huggingface.co/speechbrain/metricgan-plus-voicebank) to enhance the audio data for better model performance.
-* Transcribed the audio  data to text data using [openAI's wisper model](https://github.com/openai/whisper).
+* Used this [rnnoise](https://github.com/xiph/rnnoise) to enhance the audio data for better model performance.
+* Transcribed the audio  data to text data using [openAI's whisper model](https://github.com/openai/whisper).
 * Organized the dataset by creating a .csv file containing the audio file paths and corresponding dialogues.
 
 Audio Dataset can be downloaded from [here](https://drive.google.com/drive/folders/1BNd2w_CTQ8TMkPhgtUR-0zxSAYoliscf?usp=sharing)
@@ -34,9 +34,9 @@ Audio Dataset can be downloaded from [here](https://drive.google.com/drive/folde
 
 /metadata.csv
 
-  | - data-01|Dialogue 1.
-  | - data-02|Dialogue 2.
-  | - data-03|Dialogue 3.
+  | - data-01|speaker|Dialogue 1.
+  | - data-02|speaker|Dialogue 2.
+  | - data-03|speaker|Dialogue 3.
 
 ```
 
