@@ -14,7 +14,7 @@ graph TD;
 ## Dataset Preparation:
 
 
-For this project, we used a dataset consisting of 82 data points of Priyanka Chopra's voice notes and their corresponding transcriptions. The dataset was meticulously prepared in the following steps:
+For this project, we used a dataset consisting of 212 data points of Priyanka Chopra's voice notes and their corresponding transcriptions. The dataset was meticulously prepared in the following steps:
 
 * Extracted voice and subtitles from **Priyanka Chopra's** interview using [yt-dlp](https://github.com/yt-dlp/yt-dlp).
 * Filtered the data to remove voices of other speakers from both audio and text data.
@@ -46,18 +46,19 @@ To achieve the best results, we fine-tuned the coqui-TTS model using the followi
 
 | HyperParameters Used
 |--------------------------
-| batch_size=1
-| eval_batch_size=1
+| batch_size=16
+| eval_batch_size=16
 | num_loader_workers=4
 | num_eval_loader_workers=4
 | run_eval=True
 | test_delay_epochs=-1
-| epochs=100
+| epochs=200
+| lr = 0.0005
 | text_cleaner="phoneme_cleaners"
-| use_phonemes=True
+| use_phonemes= False
 | phoneme_language="en-us"
 | mixed_precision=True
-| save_step=1000
+| save_step=7000
 
 
 
@@ -67,7 +68,7 @@ The following results were obtained by finetuning coqui-TTS model.
 
 |  Average Loss |     Average Log MLE(Maximum Likelihood Estimation)               |        Average Loader Time |     
 | ------------- | -------------                        | -------------           |
-|    0.13410240411758423     |    -0.5187711715698242                           |    0.5410037040710449               |
+|    0.2887064963579178     |  -0.2587181031703949                     |     0.0015705227851867676              |
 
 
 ## Use Trained Model from Commad line:
